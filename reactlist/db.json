@@ -1,0 +1,9 @@
+{
+  "taskpoint": [
+    {
+      "descricao": "Estudar algo 2",
+      "id": "zgCy2u8CofQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
