@@ -3,8 +3,8 @@ import { HeaderStyle } from "./HeaderStyle"
 
 export const Header = () => {
     return (
-        <View>
-            <Text>Header Component</Text>
+        <View style={HeaderStyle.header}>
+            <Text style={HeaderStyle.headerText}>React List</Text>
         </View>
     )
 }

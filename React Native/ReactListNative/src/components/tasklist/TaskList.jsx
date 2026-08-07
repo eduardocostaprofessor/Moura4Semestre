@@ -1,10 +1,11 @@
-import { Text, View } from "react-native"
-import { TaskListStyle } from "./TaskListStyle"
+import { ScrollView, Text, View } from "react-native";
+import { TaskListStyle } from "./TaskListStyle";
+import { TaskItem } from "../taskitem/TaskItem";
 
 export const TaskList = () => {
-    return (
-        <View>
-            <Text>TaskList Component</Text>
-        </View>
-    )
-}
+  return <ScrollView style={TaskListStyle.taskListContainer}>
+        <TaskItem />
+        <TaskItem />
+        <TaskItem />
+  </ScrollView>;
+};
