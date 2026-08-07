@@ -143,8 +143,7 @@ function App() {
             }}
           />
           {/* o parágrafo é só pra ver o valor do state, vamos apagar! */}
-          <p>{taskValue}</p>
-          <p>{editMode ? "true" : "false"}</p>
+          
           <button className="card-task__btn-confirm">Adicionar</button>
 
           {editMode && (

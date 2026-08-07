@@ -1,8 +1,24 @@
 {
   "taskpoint": [
     {
-      "descricao": "Estudar algo 2",
-      "id": "zgCy2u8CofQ"
+      "descricao": "Revisar HTML e CSS",
+      "id": "_DT49QGUhCQ"
+    },
+    {
+      "descricao": "REvisar React JS",
+      "id": "wHfaoEQTiYs"
+    },
+    {
+      "descricao": "Lavar a Louça",
+      "id": "LKQG1beDsMQ"
+    },
+    {
+      "descricao": "Arrumar a Casa",
+      "id": "gWRjJ_gAbQ4"
+    },
+    {
+      "descricao": "Preparar Aula",
+      "id": "FS8jy4LLNSc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
