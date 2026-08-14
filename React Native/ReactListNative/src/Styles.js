@@ -12,8 +12,8 @@ import { StyleSheet } from "react-native";
     backgroundColor: "#1D2135",
     // alignItems: 'center',
     // justifyContent: 'center',
-    borderWidth: 3,
-    borderStyle: "solid",
-    borderColor: "blue",
+    // borderWidth: 3,
+    // borderStyle: "solid",
+    // borderColor: "blue",
   },
 });

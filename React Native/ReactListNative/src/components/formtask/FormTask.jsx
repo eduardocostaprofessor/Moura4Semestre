@@ -1,12 +1,17 @@
 import { Text, TextInput, View, TouchableOpacity, Alert } from "react-native";
 import { FormTaskStyle } from "./FormTaskStyle";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { TaskContext } from "../../context/TaskContext";
 
 export const FormTask = () => {
-  const [taskValue, setTaskValue] = useState("");
+  // const [taskValue, setTaskValue] = useState("");
+  // puxa os dados do state global (TaskContext)
+  const { postTask, taskValue, setTaskValue, editMode, setEditMode } = useContext(TaskContext)
 
   const saveTask = () => {
     console.log(taskValue)
+    postTask(taskValue)
+
     // título da janela
     // texto da mensagem
     // array com os botões da janela (podendo ser mais de 1)
@@ -18,6 +23,8 @@ export const FormTask = () => {
         },
     ])
   }
+
+  
   return (
     <View style={FormTaskStyle.formTaskBox}>
       <TextInput
@@ -35,7 +42,7 @@ export const FormTask = () => {
             saveTask()
         }}
         >
-        <Text style={FormTaskStyle.taskButtonText}>Adicionar</Text>
+        <Text style={FormTaskStyle.taskButtonText}>Salvar</Text>
       </TouchableOpacity>
     </View>
   );

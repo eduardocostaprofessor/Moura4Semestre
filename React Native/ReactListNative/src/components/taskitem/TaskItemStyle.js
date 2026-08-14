@@ -4,6 +4,7 @@ export const TaskItemStyle = StyleSheet.create({
   cardBox: {
     flexDirection: "row",
     alignItems: "center",
+    gap: 15,
     width: "100%",
     height: 70,
     padding: 15,
@@ -12,7 +13,9 @@ export const TaskItemStyle = StyleSheet.create({
     backgroundColor: "#31364D",
   },
   cardText: {
+    flex: 1,
     color: "#fff",
+    fontSize: 16,
   },
   cardButton: {
     width: 45,
@@ -21,7 +24,9 @@ export const TaskItemStyle = StyleSheet.create({
     alignItems: "center",
     
     borderWidth: 1,
-    borderStyle: "solid"
+    borderStyle: "solid",
+    borderRadius: 5,
+    
   },
 
   CardButtonEditColor: {
