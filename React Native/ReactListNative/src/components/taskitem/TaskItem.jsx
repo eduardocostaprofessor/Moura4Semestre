@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { TaskContext } from "../../context/TaskContext";
 
 export const TaskItem = ({ id, descricao }) => {
-  const { deleteTask, setTaskValue, setEditMode } = useContext(TaskContext);
+  const { deleteTask, setTaskValue, setEditMode, setIdToEdit } = useContext(TaskContext);
 
   return (
     <View style={TaskItemStyle.cardBox}>
@@ -17,6 +17,7 @@ export const TaskItem = ({ id, descricao }) => {
           
           setTaskValue(descricao)// na verdade tem que chamar o putEditPreview
           setEditMode(true)//fazer isso dentro do putEditPreview
+          setIdToEdit(id)
         }}
       >
         <Image source={require("../../../assets/edit.png")} />

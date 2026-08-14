@@ -8,7 +8,8 @@ export const TaskProvider = ({ children }) => {
   //   States Globais
   const [listagemTarefas, setListagemTarefas] = useState([]);
   const [taskValue, setTaskValue] = useState(""); //dados do formulário
-  const [editeMode, setEditMode] = useState(false);
+  const [editMode, setEditMode] = useState(false);
+  const [idToEdit, setIdToEdit] = useState(0);
 
   //   Funçoes
   const getTasks = async () => {
@@ -49,21 +50,29 @@ export const TaskProvider = ({ children }) => {
   };
 
   // na pasta moura4semestre
-    // node_module
-    // qualquer arquivo que não for o seu projeto (apagar)
+  // node_module
+  // qualquer arquivo que não for o seu projeto (apagar)
   //   visualiar os dados da edição
   const putTaskPreview = () => {};
 
   //   edita os dados na na api
+  // { id: 55, descricao: "Tarefa Editada" }
   const putTaskConfirm = async (tarefa) => {
     try {
       await axios.put(`http://172.16.1.100:3000/taskpoint/${tarefa.id}`, {
-        descricao: tarefa.taskValue,
+        descricao: tarefa.descricao,
       });
+
       getTasks();
+      setTaskValue("");
+      setIdToEdit(0);
+      setEditMode(false);
+
+      return true
     } catch (error) {
       console.log("Erro ao deletar na API");
       console.log(error);
+      return false;
     }
   };
 
@@ -80,8 +89,10 @@ export const TaskProvider = ({ children }) => {
         deleteTask,
         putTaskPreview,
         putTaskConfirm,
-        editeMode,
+        editMode,
         setEditMode,
+        idToEdit,
+        setIdToEdit,
       }}
     >
       {children}
